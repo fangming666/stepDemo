@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .pull-left {
+      float: left;
+    }
+
+    .clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .div1 {
+      width: 50px;
+      height: 72px;
+      background-image: url("http://s.cdpn.io/79/sprite-steps.png");
+      animation: play .8s steps(10, end) infinite;
+    }
+
+    .divWarp {
+      position: relative;
+    }
+
+    .div2 {
+      width: 675px;
+      position: absolute;
+      height: 103.5px;
+      left: 0;
+      top: 0;
+      background-color: white;
+      animation: run 7s steps(7, end) infinite;
+    }
+
+    @keyframes play {
+      from {
+        background-position: 0;
+      }
+      to {
+        background-position: -500px;
+      }
+    }
+
+    @keyframes run {
+      100% {
+        transform: translateX(675px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+
+  </div>
+  <div class="divWarp">
+  <div class="div2">
+
+  </div>
+  <img src="https://designmodo.com/demo/stepscss/images/pawprints.svg" alt="">
+
+  </div>
+</body>
+</html>
